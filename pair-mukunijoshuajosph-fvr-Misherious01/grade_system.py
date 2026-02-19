@@ -7,11 +7,10 @@ def grade_system():
         while True:
             try:
                 mark = float(input(f"Enter mark {i+1}: "))
-          
-                #Check if mark is within valid rangex
+                # Check if mark is within valid range
                 if 0 <= mark <= 100:
                     marks.append(mark)
-                    break #exit the while loop, to next mark
+                    break  # exit the while loop, move to next mark
                 else:
                     print("Mark must be between 0 and 100. Try again.")
             except ValueError:
@@ -32,8 +31,8 @@ def grade_system():
     else:
         grade = "F"
 
-    #Display result
+    # Display result
     print(f"\nAverage: {average:.2f} - Grade: {grade}")
 
-    #call the function to test(remove later when integrating into menu)
-    grade_system()
+# Call the function to test (this line is now OUTSIDE the function)
+grade_system()
